@@ -23,5 +23,9 @@ public class FormParameterController {
         return Result.ok().setData(body);
     }
 
+    @DeleteMapping("/delete")
+    public Result delete(String body) {
+        return Result.ok().setData(body);
+    }
 
 }

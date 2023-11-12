@@ -25,4 +25,9 @@ public class FileAndFormParameterController {
     }
 
 
+    @DeleteMapping("/delete")
+    public Result delete(@RequestParam("file") MultipartFile file, String body) {
+        return Result.of().setInfo(file.getOriginalFilename()).setData(body);
+    }
+
 }
